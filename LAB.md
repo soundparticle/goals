@@ -8,13 +8,13 @@ Create a fullstack app that allows users to track their goals.
 
 The App should offer the following routes:
 
-* `/` (home) - Landing page with explanation
+* `/` (home) - Landing page with explanation and "sign up now!"
 * `/auth` - subroutes for `/signup` and `/signin` - Sign Up/In
 * `/goals`
     * List of users own goals
         * User can mark goal complete
     * Form to add a new goal
-* `/users` (home) - List of all users and their goals (BONUS: change to be goals complete and total goals)
+* `/users` - List of all users and their goals (BONUS: change to be goals complete and total goals)
 
 Also include a header on App with Navigation links to other routes
 
