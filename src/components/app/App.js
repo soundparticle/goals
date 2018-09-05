@@ -35,8 +35,8 @@ class App extends PureComponent {
             { checkedAuth &&
             <Switch>
               <Route exact path="/" render={() => <h2>I&#39m Home!</h2>}/>
-              <Route path="/auth" componet={Auth}/>
-              <PrivateRoute exact path="/goals" componet={GoalList}/>
+              <Route path="/auth" component={Auth}/>
+              <PrivateRoute exact path="/goals" component={GoalList}/>
               <PrivateRoute path="/goals/new" component={AddGoal}/>
 
               <PrivateRoute path="/goals/:id" component={GoalDetail}/>
