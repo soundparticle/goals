@@ -1,13 +1,24 @@
 :local(.form-control) {
+  
 
   margin: 15px 0;
 
   label {
     display: block;
     font-weight: bolder;
+    // background-color: rgb(217, 224, 108);
   }
   
   .control {
     padding: 10px 0;
+    
+  }
+
+  input {
+    background-color: rgb(203, 206, 154);
+  }
+
+  button {
+    background-color: rgba(209, 153, 233, 0.769);
   }
 }
