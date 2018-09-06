@@ -3,7 +3,7 @@ export const ERROR_CLEAR = 'ERROR_CLEAR';
 export const LOADING_START = 'LOADING_START';
 export const LOADING_END = 'LOADING_END';
 
-export const getERROR = state => state.error;
+export const getError = state => state.error;
 export const getLoading = state => state.loading;
 
 export function error(state = null, { type, payload }) {
