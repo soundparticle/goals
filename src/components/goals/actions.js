@@ -15,7 +15,7 @@ export const loadGoals = () => (dispatch, getState) => {
 
 export const loadGoal = id => (dispatch, getState) => { 
   const goal = getGoalById(getState(), id);
-  if(goal && goal.favoriteToys) return;
+  if(goal) return;
   
   dispatch({
     type: GOAL_LOAD,

@@ -6,6 +6,13 @@ import { Route, Redirect } from 'react-router-dom';
 
 const PrivateRoute = ({ user, component: Component, render, ...rest }) => {
 
+  PrivateRoute.propTypes = {
+    user: PropTypes.object,
+    component: PropTypes.func,
+    render: PropTypes.func,
+    location: PropTypes.object
+  };
+  
   return <Route {...rest} render={props => {
     if(!user) return <Redirect
       to={{
@@ -22,12 +29,6 @@ const PrivateRoute = ({ user, component: Component, render, ...rest }) => {
 
 };
 
-PrivateRoute.propTypes = {
-  user: PropTypes.object,
-  component: PropTypes.func,
-  render: PropTypes.func,
-  location: PropTypes.object
-};
 
 export default connect(
   state => ({ user: getUser(state) }),
