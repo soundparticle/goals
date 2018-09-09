@@ -9,6 +9,7 @@ import { USER_AUTH, LOGOUT } from './reducers';
 import {
   signup as signupSvc,
   signin as signinSvc } from '../../services/api';
+  
 describe('auth action creators', () => {
 
   function testAuth(name, mockSvc, actionCreator) {

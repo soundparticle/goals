@@ -11,7 +11,7 @@ class AddGoal extends PureComponent {
         <h2>Add a New Goal</h2>
         <form>
           <FormControl label="Goal Focus">
-            <input name="subject"/>
+            <input name="goal"/>
           </FormControl>
 
           <FormControl label="">

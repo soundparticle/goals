@@ -22,7 +22,7 @@ class GoalDetail extends PureComponent {
     const { goal, match } = this.props;
     if(!goal || !goal.goalList) return null;
     const { url } = match;
-
+    // TODO check goal.subject in return
     return (
       <article>
         <h3>{goal.subject} will also need these: {goal.goalList}</h3>
@@ -44,7 +44,7 @@ class GoalDetail extends PureComponent {
 }
 
 const ParagraphView = ({ goals }) => (
-  <p>List of goals by subject {goals.join(', ')}</p>
+  <p>List of goals {goals.join(', ')}</p>
 );
 ParagraphView.propTypes = { goals: PropTypes.array };
 
