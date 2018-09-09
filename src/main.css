@@ -2,3 +2,7 @@
   box-sizing: border-box;
   background-color: rgb(145, 169, 164);
 }
+
+input {
+  background-color: rgb(203, 206, 154);
+}

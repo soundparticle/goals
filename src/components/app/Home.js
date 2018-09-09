@@ -6,7 +6,8 @@ import PropTypes from 'prop-types';
 class Home extends PureComponent {
   state = {
     goal: 'exercise',
-    goalList: ['running, swimming']
+    completed: false,
+    // author: user._id
   };
 
   handleChange = ({ target }) => {
@@ -15,7 +16,7 @@ class Home extends PureComponent {
   }
 
   render() {
-    const { goal, goalList } = this.state;
+    const { goal, completed } = this.state;
 
     return (
       <section>
@@ -23,7 +24,7 @@ class Home extends PureComponent {
           goal: <input name="goal" value={goal} onChange={this.handleChange}/>
         </p>
         <p>
-          goalList: <input name="goalList" value={goalList} onChange={this.handleChange}/>
+          completed: <input name="completed" value={completed} onChange={this.handleChange}/>
         </p>
 
         <ChildComponent name={goal}/>
@@ -64,7 +65,7 @@ class Display extends PureComponent {
 
   render() {
     const { children, location } = this.props;
-    console.log(children);
+    // console.log(children);
     return (
       <div>
         <h3>Display Component</h3>
