@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getUser } from '../auth/reducers';
 import { logout } from '../auth/actions';
-import { /*Route*/ Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Error from './Error';
 
 class Header extends PureComponent {
@@ -39,17 +39,6 @@ class Header extends PureComponent {
               ? <Link to="/" onClick={this.handleLogout}>Logout</Link>
               : <Link to="/auth">Login</Link>
           }
-
-          {/* <Route path="/goals/:id" render={({ match: { url } }) => {
-            return (
-              <Fragment>
-                &bsp;
-                <Link to={`${url}/paragraph`}>paragraph view</Link>
-                &bsp;
-                <Link to={`${url}/list`}>list view</Link>
-              </Fragment>            
-            );
-          }}/> */}
         </nav>
         { user && <span>Welcome, {user.name}!</span> }
         <Error/>

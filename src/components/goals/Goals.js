@@ -6,7 +6,6 @@ import { getGoals } from './reducers';
 import { loadGoals, addGoal } from './actions';
 import GoalForm from './GoalForm';
 import Goal from './Goal';
-import styles from './Goals.css';
 
 export class Goals extends PureComponent {
   state = { 
@@ -38,7 +37,7 @@ export class Goals extends PureComponent {
     const { adding } = this.state;
     const { goals, user } = this.props;
     return (
-      <div className={styles.goals}>
+      <div>
         <section className="goals-title">
           {adding
             ? <GoalForm onCancel={this.toggleAdding} submit={this.handleAdd}/>

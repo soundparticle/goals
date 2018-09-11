@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { updateGoal } from './actions';
 import { connect } from 'react-redux';
 import GoalDisplay from './GoalDisplay';
-import styles from './Goal.css';
 
 class Goal extends PureComponent {
   state = { 
@@ -29,7 +28,6 @@ class Goal extends PureComponent {
      return (
        <li 
          onClick={this.handleUpdate}
-         className={styles.goal}
        >
          <GoalDisplay goal={goal}/>
        </li>
