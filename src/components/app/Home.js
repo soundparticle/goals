@@ -85,7 +85,7 @@ class ChildComponent extends PureComponent {
 
   render() {
     const { goal } = this.props;
-    console.log('ChildComponent render()');
+    // console.log('ChildComponent render()');
     return (
       <p>
         Goal: {goal}
