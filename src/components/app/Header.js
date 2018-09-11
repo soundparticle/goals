@@ -1,5 +1,5 @@
 
-import React, { Component, /*Fragment*/ } from 'react';
+import React, { PureComponent, /*Fragment*/ } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getUser } from '../auth/reducers';
@@ -7,7 +7,7 @@ import { logout } from '../auth/actions';
 import { /*Route*/ Link } from 'react-router-dom';
 import Error from './Error';
 
-class Header extends Component {
+class Header extends PureComponent {
 
   static propTypes = {
     user: PropTypes.object,
@@ -51,7 +51,7 @@ class Header extends Component {
             );
           }}/> */}
         </nav>
-        { user && <span>Welcome {user.name}!</span> }
+        { user && <span>Welcome, {user.name}!</span> }
         <Error/>
       </header>
     );

@@ -12,9 +12,11 @@ class User extends PureComponent {
 
     return (
       <li>
-        <p>{user.name}</p>
-        <p>Completed Goals: {user.completed}</p>
-        <p>Total Goals: {user.total}</p>
+        <section>
+          <p>{user.name}</p>
+          <p>Completed Goals: {user.completed}</p>
+          <p>Total Goals: {user.total}</p>
+        </section>
       </li>
     );
   }

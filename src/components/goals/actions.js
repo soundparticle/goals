@@ -1,30 +1,26 @@
-import { GOALS_LOAD, GOAL_LOAD } from './reducers';
-import { getAllGoals, getGoals } from '../../services/api';
-import { getGoalList, getGoalById } from './reducers';
+import { GOALS_LOAD, GOALS_ADD, GOAL_UPDATE } from './reducers';
+import { getGoals, postGoal, changeGoalStatus } from '../../services/api';
 
-export const loadGoals = () => (dispatch, getState) => {
-  const goalList = getGoalList(getState());
-  if(goalList.length) return;
 
-  dispatch({
+
+export const loadGoals = () => {
+  return {
     type: GOALS_LOAD,
-    payload: getAllGoals()
-  });
+    payload: getGoals()
+  };
 };
 
-
-export const loadGoal = id => (dispatch, getState) => { 
-  const goal = getGoalById(getState(), id);
-  if(goal) return;
-  
-  dispatch({
-    type: GOAL_LOAD,
-    payload: getGoals(id)
-  });
+export const addGoal = data => {
+  return {
+    type: GOALS_ADD,
+    payload: postGoal(data)
+  };
 };
 
-export const clearGoal = () => ({
-  type: GOAL_LOAD,
-  payload: null
-});
+export const updateGoal = id => {
+  return {
+    type: GOAL_UPDATE,
+    payload: changeGoalStatus(id)
+  };
+};
 

@@ -27,7 +27,7 @@ class Users extends PureComponent {
         <ul className="users-list">
           {users.map(user => (
             <User
-              key={user.id}
+              key={user._id}
               user={user}
             />
           ))}

@@ -3,23 +3,18 @@ import PropTypes from 'prop-types';
 import styles from './Credentials.css';
 import FormControl from '../shared/FormControl';
 
-export default class Credentials extends PureComponent {
+export class Credentials extends PureComponent {
 
   static propTypes = {
     submit: PropTypes.func.isRequired,
     action: PropTypes.string.isRequired,
     allowName: PropTypes.bool
-  };
-
-  state = {
+  }
+  state = { 
     name: '',
     email: '',
     password: ''
-  };
-
-  handleChange = ({ target }) => {
-    this.setState({ [target.name]: target.value });
-  };
+  }
 
   handleSubmit = event => {
     event.preventDefault();
@@ -27,13 +22,17 @@ export default class Credentials extends PureComponent {
       .catch(() => {});
   }
 
-  render() {
+  handleChange = ({ target }) => {
+    this.setState({ [target.name]: target.value });
+  }
+
+  render() { 
     const { action, allowName = false } = this.props;
     const { name, email, password } = this.state;
-
+    
     return (
       <form className={styles.credentials} onSubmit={this.handleSubmit}>
-        { allowName &&
+        { allowName && 
           <FormControl label="name">
             <input name="name" value={name} onChange={this.handleChange}/>
           </FormControl>
@@ -41,16 +40,19 @@ export default class Credentials extends PureComponent {
         <FormControl label="email">
           <input name="email" value={email} onChange={this.handleChange}/>
         </FormControl>
-        
+
         <FormControl label="password">
-          <input type="password" name="password" 
-            value={password} onChange={this.handleChange}/> 
+          <input name ="password" type="password" 
+            value={password} onChange={this.handleChange}/>
         </FormControl>
 
         <FormControl>
           <button>{action}</button>
         </FormControl>
+        
       </form>
     );
   }
 }
+ 
+export default Credentials;
