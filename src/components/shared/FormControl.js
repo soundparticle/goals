@@ -13,12 +13,12 @@ class FormControl extends PureComponent {
     const { label, children } = this.props;
 
     return (
-      <div className={styles['form-control']}>
+      <section className={styles['form-control']}>
         { label && <label>{label}:</label> }
-        <div className="control">
+        <section className="control">
           {children}
-        </div>
-      </div>
+        </section>
+      </section>
     );
   }
 }

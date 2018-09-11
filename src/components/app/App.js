@@ -2,7 +2,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
-import PrivateRoute from './PrivateRoute';
 import { connect } from 'react-redux';
 import { tryLoadUser } from '../auth/actions';
 import { getCheckedAuth } from '../auth/reducers';
@@ -10,8 +9,8 @@ import Header from './Header';
 import Home from './Home';
 import Auth from '../auth/Auth';
 import GoalList from '../goals/GoalList';
-// import GoalDetail from '../goals/GoalDetail';
 import Users from '../users/Users';
+import PrivateRoute from './PrivateRoute';
 // import AddGoal from '../goals/AddGoal';
 import styles from './App.css';
 
