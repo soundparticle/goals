@@ -5,8 +5,8 @@ const GOALS_URL = `${URL}/goals`;
 const AUTH_URL = `${URL}/auth`;
 const SIGNUP_URL = `${AUTH_URL}/signup`;
 const SIGNIN_URL = `${AUTH_URL}/signin`;
-export const signin = credentials => post(`${SIGNIN_URL}/signin`, credentials);
-export const signup = credentials => post(`${SIGNUP_URL}/signup`, credentials);
+export const signin = credentials => post(`${SIGNIN_URL}`, credentials);
+export const signup = credentials => post(`${SIGNUP_URL}`, credentials);
 
 export const verifyUser = token => get(`${AUTH_URL}/verify`, {
   headers: {
