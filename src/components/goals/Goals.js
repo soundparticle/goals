@@ -43,6 +43,8 @@ export class Goals extends PureComponent {
             ? <GoalForm onCancel={this.toggleAdding} submit={this.handleAdd}/>
             : <Fragment>
               <h2>{user.name}&apos;s goals:</h2>
+              <h4>Please click on goal to check off when completed.</h4>
+
               <button onClick={this.toggleAdding}>Add</button>
             </Fragment>
           }
