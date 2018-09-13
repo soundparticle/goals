@@ -13,15 +13,16 @@ class Goal extends PureComponent {
      goal: PropTypes.object.isRequired,
      updateGoal: PropTypes.func.isRequired
    }
-
+   
    toggleEdit = () => {
      this.setState(({ editing }) => ({ editing: !editing }));
    };
-
+   
    handleUpdate = () => {
      const { updateGoal, goal } = this.props;
      return updateGoal(goal._id);
    };
+
 
    render() { 
      const { goal } = this.props;
