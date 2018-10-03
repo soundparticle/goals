@@ -1,4 +1,4 @@
-# goals
+# Goal Tracker
 Solo Project
 
 This is a simple app I created that lets the user enter in and track their progress towards goals that they're setting out to achieve.
