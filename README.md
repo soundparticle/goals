@@ -8,3 +8,4 @@ You are able to add goals and mark them checked off as completed. The app contai
 Jest/Mocha: For TDD testing.
 Express/React Router: for setting up routes.
 NodeJS
+React/Redux
